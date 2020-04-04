@@ -1,0 +1,23 @@
+h1 {
+	padding-top: 1em;
+	text-align: center;
+	color: white;
+	font-size: 5em;
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.container {
+  background-image: url("img/motwss.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: auto;
+}
