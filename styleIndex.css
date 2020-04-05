@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 h1 {
 	padding-top: 1em;
 	text-align: center;
@@ -20,4 +25,24 @@ hr {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: auto;
+}
+
+#imgC {
+	height: 200px; 
+	width: 300px;.
+}
+
+#info{
+	margin-top: 4em;
+	margin-left: 2em;
+}
+
+#MAP {
+	margin-top: 2em;
+}
+
+#map{
+	text-align: center;
+	height: 500px;
+	width: 500px;
 }
