@@ -1,48 +1,80 @@
-* {
-	margin: 0;
-	padding: 0;
+
+.container{
+	animation: transitionIn 1.00s;
 }
 
-h1 {
-	padding-top: 1em;
-	text-align: center;
-	color: white;
-	font-size: 5em;
+#bannerimage{
+	animation: transitionIn 1.00s;
+}
+
+@keyframes transitionIn {
+	from{
+		opacity: 0;
+		transform: rotateX(-50deg);
+	}
+
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
 }
 
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-.container {
-  background-image: url("img/motwss.jpg");
-  background-repeat: no-repeat;
+#bannerimage {
+  width: 100%;
+  background-image: url(img/1.jpg);
+  height: 500px;
+  background-position: center;
   background-attachment: fixed;
-  overflow: auto;
 }
 
-#imgC {
-	height: 200px; 
-	width: 300px;.
-}
-
-#info{
-	margin-top: 4em;
-	margin-left: 2em;
-}
-
-#MAP {
-	margin-top: 2em;
-}
-
-#map{
+h1{
 	text-align: center;
-	height: 500px;
-	width: 500px;
+	font-size: 6rem;
+	color: white;
+	padding-top: 1em;
+}
+
+.btn{
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+
+.tittle{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 5em;
+}
+#tittle1{
+	font-size: 50px;
+}
+
+.col{
+	margin-top: 4rem;
+	display: flex;
+	justify-content: center;
+}
+
+#definicion{
+	font-size: 20px;
+}
+
+#imgC{
+	float: right;
+	width: 100%;
+	height: 100%;
+}
+
+#line{
+	size: 1px;
+	width: 100%;
+}
+
+.section{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	margin-top: 5em;
 }

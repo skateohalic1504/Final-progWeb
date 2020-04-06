@@ -7,73 +7,84 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="styleIndex.css">
+	<!-- Mapbox -->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 
 <!-- Pagina Principal -->
 <!-- Nav Bar -->
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">COVID-19</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<header>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">COVID-19</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Registrate hoy!</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sobre Nosotros</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<hr>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="index.html">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Login</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Registrate hoy!</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="Carpeta About Us - Proyecto Final/index.html">Sobre Nosotros</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	</header>
 
 <!-- Header text -->
 
-<div class="container">
-	<div class="row">
-		<div class="col">
-			<h1 class="font-weight-normal">COVID-19 Tracker</h1>
-		</div>	
+	<div id="bannerimage">
+		<h1>COVID-19 Tracker</h1>
+		<!--<button class="btn btn-dark">Learn More</button>-->
 	</div>
-</div>
-<div class="row" id="info">
-	<div class="col">
-		<img id="imgC" src="img/coronovirus.jpg">
+
+	<div class="container">
+		<div class="tittle">
+				<h2 id="tittle1">Que es?</h2>
+		</div>
+		<hr id="line">
+
+		<div class="row">
+			<div class="col">
+				<img id="imgC" src="img/coronovirus.jpg">
+			</div>
+			<div id="definicion" class="col">
+				<p>Los coronavirus son una familia de virus que pueden causar enfermedades como el resfriado común, el síndrome respiratorio agudo grave (SARS, por sus siglas en inglés), y el síndrome respiratorio de Oriente Medio (MERS, por sus siglas en inglés). En 2019 se identificó un nuevo coronavirus como la causa de un brote de enfermedades que se originó en China.
+				<small><a target="_blank" href="https://www.mayoclinic.org/es-es/diseases-conditions/coronavirus/symptoms-causes/syc-20479963">Mas Informacion</a></small>
+				</p>
+			</div>
+			<hr id="line">
+		</div>
+
+		<div class="section">
+			<h3 style="font-size: 50px;">Mapa de Casos</h3>
+		</div>
+		<div class="section">
+			<div id='map' style='width: 100%; height: 300px;'></div>
+			<script>
+			mapboxgl.accessToken = 'pk.eyJ1Ijoic2thdGVvaGFsaWMxNTA0IiwiYSI6ImNrOG5jbWZjMTBzbXkzbXBzNXc2ajNyaXcifQ.9cboPzPcoNeS-CllveacJg';
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11'
+			});
+			</script>
+		</div>
+
+		<div class="section">
+			<h3 style="font-size: 50px;">Noticias</h3>
+		</div>
 	</div>
-	<div class="col">
-		<h4>Que es el covid-19?</h4>
-		<p>Los coronavirus son una familia de virus que pueden causar enfermedades como el resfriado común, el síndrome respiratorio agudo grave (SARS, por sus siglas en inglés), y el síndrome respiratorio de Oriente Medio (MERS, por sus siglas en inglés). En 2019 se identificó un nuevo coronavirus como la causa de un brote de enfermedades que se originó en China.</p>
-		<hr>
-		<small><a href="https://www.mayoclinic.org/es-es/diseases-conditions/coronavirus/symptoms-causes/syc-20479963">mayoclinic.org</a></small>
-	</div>
-</div>
-
-<!-- Mapa -->
-<!--
-<div id="MAP">
-	<div id='map'></div>
-	<script>
-	mapboxgl.accessToken = 'pk.eyJ1Ijoic2thdGVvaGFsaWMxNTA0IiwiYSI6ImNrOG5jbWZjMTBzbXkzbXBzNXc2ajNyaXcifQ.9cboPzPcoNeS-CllveacJg';
-	var map = new mapboxgl.Map({
-	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v11'
-	});
-	</script>
-</div>
--->
-
-
 
 
 <script src="index.js"></script>
