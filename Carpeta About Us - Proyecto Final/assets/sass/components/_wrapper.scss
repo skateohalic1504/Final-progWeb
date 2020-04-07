@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 /* Wrapper */
 
 	.wrapper {
@@ -17,4 +21,28 @@
 			@include padding(2rem, 0);
 		}
 
+<<<<<<< HEAD
+=======
+=======
+/* Wrapper */
+
+	.wrapper {
+		@include padding(8rem, 0);
+		position: relative;
+		z-index: 1;
+
+		@include breakpoint('<=large') {
+			@include padding(4rem, 0);
+		}
+
+		@include breakpoint('<=small') {
+			@include padding(3rem, 0);
+		}
+
+		@include breakpoint('<=xsmall') {
+			@include padding(2rem, 0);
+		}
+
+>>>>>>> 203bff500ee3a47cdeba7280eb4d50e3385a18cb
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 	}

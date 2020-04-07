@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 /* Icon */
 
 	.icon {
@@ -8,4 +12,19 @@
 		> .label {
 			display: none;
 		}
+<<<<<<< HEAD
+=======
+=======
+/* Icon */
+
+	.icon {
+		@include icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+>>>>>>> 203bff500ee3a47cdeba7280eb4d50e3385a18cb
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 	}

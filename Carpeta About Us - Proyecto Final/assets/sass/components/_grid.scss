@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 /* Grid */
 
 	@include grid(3rem);
@@ -20,4 +24,31 @@
 
 	@include breakpoint('<=xsmall') {
 		@include grid(1.25rem, 'xsmall');
+<<<<<<< HEAD
+=======
+=======
+/* Grid */
+
+	@include grid(3rem);
+
+	@include breakpoint('<=xlarge') {
+		@include grid(3rem, 'xlarge');
+	}
+
+	@include breakpoint('<=large') {
+		@include grid(1.5rem, 'large');
+	}
+
+	@include breakpoint('<=medium') {
+		@include grid(1.5rem, 'medium');
+	}
+
+	@include breakpoint('<=small') {
+		@include grid(1.25rem, 'small');
+	}
+
+	@include breakpoint('<=xsmall') {
+		@include grid(1.25rem, 'xsmall');
+>>>>>>> 203bff500ee3a47cdeba7280eb4d50e3385a18cb
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 	}

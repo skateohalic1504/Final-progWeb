@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 /* Inner */
 
 	.inner {
@@ -8,4 +12,19 @@
 		@include breakpoint('<=xsmall') {
 			max-width: calc(100% - 3rem);
 		}
+<<<<<<< HEAD
+=======
+=======
+/* Inner */
+
+	.inner {
+		margin: 0 auto;
+		width: _size(inner-width);
+		max-width: calc(100% - 6rem);
+
+		@include breakpoint('<=xsmall') {
+			max-width: calc(100% - 3rem);
+		}
+>>>>>>> 203bff500ee3a47cdeba7280eb4d50e3385a18cb
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 	}

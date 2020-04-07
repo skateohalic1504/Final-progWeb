@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 /* Image */
 
 	.image {
@@ -51,4 +55,62 @@
 				width: 100%;
 			}
 		}
+<<<<<<< HEAD
+=======
+=======
+/* Image */
+
+	.image {
+		border-radius: _size(border-radius);
+		border: 0;
+		display: inline-block;
+		position: relative;
+
+		img {
+			border-radius: _size(border-radius);
+			display: block;
+		}
+
+		&.left,
+		&.right {
+			max-width: 40%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&.left {
+			float: left;
+			margin: 0 2rem 2rem 0;
+			top: 0.25rem;
+		}
+
+		&.right {
+			float: right;
+			margin: 0 0 2rem 2rem;
+			top: 0.25rem;
+		}
+
+		&.fit {
+			display: block;
+			margin: 0 0 _size(element-margin) 0;
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&.main {
+			display: block;
+			margin: 0 0 (_size(element-margin) * 1.5) 0;
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
+		}
+>>>>>>> 203bff500ee3a47cdeba7280eb4d50e3385a18cb
+>>>>>>> 51326b5340355f71ecae5538eecea80c1e4ce4e3
 	}
