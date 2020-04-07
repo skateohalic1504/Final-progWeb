@@ -78,3 +78,7 @@ h1{
 	justify-content: center;
 	margin-top: 5em;
 }
+.mapboxgl-popup {
+	max-width: 400px;
+	font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	}

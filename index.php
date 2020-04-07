@@ -1,3 +1,5 @@
+<?php require 'query.php' ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +31,7 @@
 	        <a class="nav-link" href="index.html">Home</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="admin/home.php">Area Admin</a>
+	        <a class="nav-link" href="home.php">Area Admin</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="Carpeta About Us - Proyecto Final/index.html">Sobre Nosotros</a>
