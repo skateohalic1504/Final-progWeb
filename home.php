@@ -170,12 +170,15 @@ require 'query.php'
 	</div>
 			<script>
 			map.on('load',function(){
-				<?php foreach ($query as $row){ ?>
+				
 					map.addSource('places',{
 						'type': 'geojson',
 						'data':{
 							'type': 'FeatureCollection',
-							'features': [{
+							'features': [
+
+								<?php foreach ($query as $row){ ?>
+								{
 									'type':'Feature',
 									'properties': {
 										'description':
@@ -186,11 +189,17 @@ require 'query.php'
 										'type': 'Point',
 										'coordinates': [<?php echo $row['latitud']?>, <?php echo $row['longitud'] ?>]
 									}
-							}]						
+							
+								}
+
+							<?php } ?>
+						]						
 						}	
 					}); 
-				<?php } ?>
+				
 			}
+
+
 				 
 
 	
