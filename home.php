@@ -170,37 +170,32 @@ require 'query.php'
 	</div>
 			<script>
 			map.on('load',function(){
-					
-						
-							map.addSource('places',{
-								'type': 'geojson',
-								'data':{
-									'type': 'FeatureCollection',
-									'features': [
-									<?php foreach($query as $row){?>
-										{
-											'type':'Feature',
-											'properties': {
-												'description':
-												'Cedula: <?php echo $row['cedula'] ?> </br> Nombre: <?php echo $row['nombre'] ?> </br> Fecha: <?php echo $row['fecha'] ?> ',
-												'icon': 'rocket'
-											},
-											'geometry':{
-												'type': 'Point',
-												'coordinates': [<?php echo $row['latitud'] ?>, <?php echo $row['longitud'] ?> ]
-											}
-										
-										<?php 
-										}
-
-										?>,
-										
-										
-									]
+					map.addSource('places',{
+						'type': 'geojson',
+						'data':{
+							'type': 'FeatureCollection',
+							'features': [{
+							<?php foreach($query as $row){ ?>
 								
-							}
-							}); 
-				}
+									'type':'Feature',
+									'properties': {
+										'description':
+										'Cedula: <?php echo $row['cedula'] ?> </br> Nombre: <?php echo $row['nombre'] ?> </br> Fecha: <?php echo $row['fecha'] ?> ',
+										'icon': 'rocket'
+									},
+									'geometry':{
+										'type': 'Point',
+										'coordinates': [<?php echo $row['latitud'] ?>, <?php echo $row['longitud'] ?> ]
+									}
+								
+							<?php 
+							} 
+							?>
+							
+						}]						
+						}	
+					}); 
+			}
 				 
 
 	
@@ -240,9 +235,7 @@ map.on('mouseenter', 'places', function() {
 	});
 
 });
-
-
-			</script>
+</script>
 
 </body>
 </html>
