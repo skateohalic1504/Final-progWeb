@@ -6,3 +6,5 @@ Integrantes:
 Enmanuel Rivas 2017-5132
 
 Diego Lopez 2017-4978
+
+Maximo  Marte  Veloz  2016-3567
