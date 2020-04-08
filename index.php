@@ -79,8 +79,39 @@
 		<div class="section">
 			<h3 style="font-size: 50px;">Noticias</h3>
 		</div>
+		<script type="text/javascript" src="https://www.24-7pressrelease.com/js/newsfeed.js"></script>
+	<script type="text/javascript" src="https://www.24-7pressrelease.com/js/js_press_releases.php?category_id=205&limit=20"></script>
+	<script type="text/javascript">
+	js_style = 1;
+	target = "_blank";
+	if (newsfeed){
+		showNews(newsfeed, js_style);
+	} else {
+		document.write("News feeds did not import correctly. Please contact the 24-7 pressrelease administrators");
+	}
+	</script>
 	</div>
+	<section>
+	
+		<div class="tittle">
+			<h3 id="tittle1">Unete a nuestro grupo de Telegram!</h3>
+		</div>
+		<div class="text-center">
+		<button class="btn-primary" onclick="window.location.href = 'https://t.me/joinchat/PVYfDBumWYYSi7qTMWe4ww';">Telegram</button>
+		</div>
 
+	</section>
+
+	<section>
+		<div class="tittle">
+			<h3 id="tittle1">Agradecimientos</h3>
+		</div>
+		<div class="text-center">
+		<p>
+			Agradecemos a todas las personas trabajando para detener el COVID 19 y a todas las personas realizando actividades medicas y/o sanitarias para atender a los pacientes.
+		</p>
+	</div>
+	</section>
 
 <script src="index.js"></script>
 
