@@ -1,5 +1,5 @@
 # Final-progWeb
-
+Para abrir pagina principal, abrir index.html en chrome.
 
 Integrantes: 
 
