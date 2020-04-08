@@ -101,7 +101,7 @@ require 'query.php'
 
 		<!-- logged in user information -->
 		<div class="profile_info">
-			<img src="images/admin_profile.png"  >
+			<img src="admin_profile.png"  >
 
 			<div>
 				<?php  if (isset($_SESSION['user'])) : ?>
