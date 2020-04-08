@@ -21,7 +21,7 @@ function isAdmin()
 	}
 }
 
-require 'query.php'
+require 'mapquery.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -124,9 +124,6 @@ require 'query.php'
 		</div>
 		<div class="section">
 			<div id='map' style='width: 100%; height: 600px;'></div>
-			<script src="index.js">
-			
-			</script>
 		</div>
 		
 		<table class="table">
@@ -147,7 +144,7 @@ require 'query.php'
 
 			<tbody id="datos">
 			<?php
-			foreach ($query as $row) { ?>
+			foreach ($dbquery as $row) { ?>
 				<tr>
 					<td><?php echo $row['cedula']; ?></td>
 					<td><?php echo $row['nombre']; ?></td>
@@ -169,35 +166,25 @@ require 'query.php'
                 </br>
 	</div>
 			<script>
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2thdGVvaGFsaWMxNTA0IiwiYSI6ImNrOG5jbWZjMTBzbXkzbXBzNXc2ajNyaXcifQ.9cboPzPcoNeS-CllveacJg';
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [-70.1654584, 18.7009047],
+			zoom: 8
+			});
+
+
+			
+
 			map.on('load',function(){
 				
 					map.addSource('places',{
 						'type': 'geojson',
-						'data':{
-							'type': 'FeatureCollection',
-							'features': [
-
-								<?php foreach ($query as $row){ ?>
-								{
-									'type':'Feature',
-									'properties': {
-										'description':
-										'Cedula: <?php echo $row['cedula'] ?> </br> Nombre: <?php echo $row['nombre'] ?> </br> Fecha: <?php echo $row['fecha'] ?> ',
-										'icon': 'rocket'
-									},
-									'geometry':{
-										'type': 'Point',
-										'coordinates': [<?php echo $row['latitud']?>, <?php echo $row['longitud'] ?>]
-									}
-							
-								}
-
-							<?php } ?>
-						]						
-						}	
-					}); 
-				
-			}
+						'data':
+							<?php echo json_encode($feature); ?>
+						}); 
 
 
 				 
@@ -239,7 +226,8 @@ map.on('mouseenter', 'places', function() {
 	});
 
 });
-</script>
+			
+    		</script>
 
 </body>
 </html>
