@@ -7,7 +7,7 @@
   $query = mysqli_query($conectar, $consultar);	
 
   if ($query) {
-  	echo "<script> alert('Pokemon Eliminado');
+  	echo "<script> alert('Caso Eliminado');
   	location.href='home.php';</script>";
   }  
 ?>
